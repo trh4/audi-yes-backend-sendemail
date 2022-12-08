@@ -57,6 +57,7 @@ app.use("/sendemail", validate, sendemail);
 app.get("/sendemail", (req, res, next) => {
   res.sendStatus(200);
 });
+app.get("/", (req, res) => res.send("Hello World!"));
 
 app.listen(PORT, () => {
   console.log("app listening on port", PORT);
