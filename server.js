@@ -3,7 +3,7 @@ const express = require("express");
 const validator = require("validator");
 const rateLimit = require("express-rate-limit");
 const fetch = require("node-fetch");
-
+const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const limiter = rateLimit({
@@ -13,6 +13,7 @@ const limiter = rateLimit({
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
 app.use(limiter);
+// app.use(cors());
 
 const validate = (req, res, next) => {
   if (
