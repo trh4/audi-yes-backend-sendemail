@@ -5,7 +5,7 @@ const rateLimit = require("express-rate-limit");
 const fetch = require("node-fetch");
 
 const app = express();
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 3000;
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 20, // Limit each IP to 20 requests per `window` (here, per 15 minutes)
