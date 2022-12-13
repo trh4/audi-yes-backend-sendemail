@@ -40,7 +40,7 @@ const sendemail = (req, res, next) => {
         apikey: apikey,
         from: "yes@yes-hd.com",
         subject: bodyText,
-        to: "trh4445@gmail.com",
+        to: "yesactive2@gmail.com",
         bodyText: bodyText,
         isTransactional: true,
       })
